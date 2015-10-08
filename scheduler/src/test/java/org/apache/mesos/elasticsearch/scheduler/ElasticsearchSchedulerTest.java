@@ -52,8 +52,8 @@ public class ElasticsearchSchedulerTest {
 
         configuration = mock(org.apache.mesos.elasticsearch.scheduler.Configuration.class);
         when(configuration.getElasticsearchNodes()).thenReturn(3);
-        when(configuration.getMesosZKURL()).thenReturn("zk://zookeeper:2181/mesos");
-        when(configuration.getFrameworkZKURL()).thenReturn("zk://zookeeper:2181/mesos");
+        when(configuration.getMesosZKURL()).thenReturn("zk://localhost:2181/mesos");
+        when(configuration.getFrameworkZKURL()).thenReturn("zk://localhost:2181/mesos");
         when(configuration.getTaskName()).thenReturn("esdemo");
         when(configuration.getExecutorHealthDelay()).thenReturn(10L);
         when(configuration.getExecutorTimeout()).thenReturn(10L);
